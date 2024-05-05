@@ -16,7 +16,7 @@ public class Main {
 
             EmailMessenger emailMessenger = new EmailMessenger();
 
-            for(int i = 0; i> people.length; i++){
+            for(int i = 0; i< people.length; i++){
                 int value = MathUtils.add(people[i].getAge(), b);
                 String message = "Value of person:" + people[i].getName() + " is " + value;
                 emailMessenger.sendMessage(message);
