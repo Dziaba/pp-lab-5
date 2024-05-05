@@ -1,19 +1,16 @@
-import company.beans.Person;
-import company.exceptions.InvalidAgeException;
 import company.implementations.EmailMessenger;
+import company.utils.MathUtils;
 
 public class Main {
     public static void main (String[] args){
-        try{
-            Person person = new Person ("Bob", 55);
-            System.out.println("Name: " + person.getName());
-            System.out.println("age:" + person.getAge());
-        }
-        catch (InvalidAgeException msg){
-            System.out.println("Error: " + msg.getMessage());
-        }
-        
+        int number1= 2;
+        int number2= 3;
+        int sum = MathUtils.add(number1, number2);
+        System.out.println("sum : " + sum);
+
         EmailMessenger emailMessenger = new EmailMessenger();
-        emailMessenger.sendMessage("it works ! ");
+        emailMessenger.sendMessage("sum oif those numbers is:" + sum);
+       emailMessenger.sendMessage("Email sent"); 
+
     }
 }
